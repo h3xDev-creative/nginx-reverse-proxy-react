@@ -36,18 +36,18 @@ Before you start, ensure you have the following:
 
 To get started, clone this repository:
 
-\`\`\`bash
-git clone https://github.com/your-repo/nginx-react-app.git
-cd nginx-react-app
-\`\`\`
+```bash
+git clone https://github.com/h3xDev-creative/nginx-reverse-proxy-react.git
+cd nginx-reverse-proxy-react
+```
 
 ### 🛠️ Install Dependencies:
 
 Install the required **Ansible** roles and dependencies:
 
-\`\`\`bash
+\\\bash
 ansible-galaxy install -r requirements.yml
-\`\`\`
+\\\
 
 ---
 
@@ -62,9 +62,9 @@ ansible-galaxy install -r requirements.yml
 
 1. **Build the React App**:
 
-\`\`\`bash
+```bash
 npm run build
-\`\`\`
+```
 
 2. **Copy the Build Folder**:
 
@@ -76,9 +76,9 @@ Place the contents of the `build/` directory into the `files/react-app/` directo
 
 Once you've configured your Nginx and React app, run the playbook:
 
-\`\`\`bash
+```bash
 ansible-playbook site.yml
-\`\`\`
+```
 
 Visit your server’s IP address in a browser, and you should see your React app being served through Nginx! 🎉
 
@@ -86,11 +86,11 @@ Visit your server’s IP address in a browser, and you should see your React app
 
 ## 📜 License
 
-Distributed under the MIT License. See `LICENSE` for more information.
+Distributed under the GNU Public License Version 2.0. See `LICENSE` for more information.
 
 ---
 
 ## 🌟 Acknowledgments
 
-- Thanks to the creators of **React**, **Nginx**, and **Ansible**! 👏
+- Thanks to the creators of **React**, **React-demo-app** **Nginx**, and **Ansible**! 👏
 - Inspiration from the awesome open-source community. 💡
