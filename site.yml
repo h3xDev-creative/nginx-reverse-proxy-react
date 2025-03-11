@@ -1,0 +1,6 @@
+---
+- name: Configure Nginx as reverse proxy for React app
+  hosts: web_servers          # Target the web_servers group from the inventory
+  become: yes                 # Use privilege escalation (sudo) to install packages
+  roles:
+    - nginx                   # Run the Nginx role for setting up reverse proxy

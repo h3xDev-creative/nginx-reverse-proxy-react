@@ -1,0 +1,31 @@
+---
+- name: Install Nginx
+  apt:
+    name: "{{ nginx_package }}"
+    state: present
+  become: yes
+
+- name: Ensure Nginx service is started
+  service:
+    name: "{{ nginx_service }}"
+    state: started
+    enabled: yes
+  become: yes
+
+- name: Create React app directory
+  file:
+    path: "{{ react_app_directory }}"
+    state: directory
+    mode: '0755'
+  become: yes
+
+- name: Deploy Nginx configuration for React app
+  template:
+    src: react-app.conf.j2
+    dest: "/etc/nginx/sites-available/{{ nginx_domain }}"
+  become: yes
+
+- name: Enable Nginx site configuration
+  command: nginx -s reload
+  become: yes
+  notify: Restart Nginx

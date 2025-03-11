@@ -1,0 +1,4 @@
+# group_vars/all.yml
+nginx_package: nginx          # Package name for Nginx installation
+nginx_service: nginx          # Nginx service name
+react_app_directory: /var/www/react_app # Directory to store React app
